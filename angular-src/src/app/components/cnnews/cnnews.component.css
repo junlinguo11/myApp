@@ -1,0 +1,43 @@
+figure {
+  display: table;
+  position: relative;
+  cursor: pointer;
+}
+
+figure img {
+  display: block;
+  margin: 0;
+  clip: rect(40px,100px,40px,60px);
+  width: 160px;
+  height:160px;
+}
+
+figcaption {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font: 400 12px/26px Verdana, sans-serif;
+  padding: .2em 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+/*.slide-over {
+  background: rgba(0, 0, 0, 0.5);
+  font: 400 18px/26px Verdana, sans-serif;
+  color: ghostwhite;
+}*/
+.carousel {
+  transition: transform .8s, box-shadow .5s;
+}
+
+.carousel-inner {
+  max-height: 160px;
+  max-width: 160px;
+}
+
+.carousel:hover {
+  box-shadow: 15px 25px 15px 0px rgba(0,0,0,0.4);
+	transform: translate(-10px, -10px);
+}

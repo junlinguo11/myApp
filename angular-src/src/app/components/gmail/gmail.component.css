@@ -1,0 +1,27 @@
+#gmail {
+    width: 160px;
+    height: 160px;
+    /*animation: background 10s infinite alternate;*/
+    background-color: white;
+}
+
+@keyframes background
+{
+    0% {background-color: rgba(63, 191, 191, 0.3)}
+    25%  {background: rgba(156, 224, 127, 0.67)}
+    50%  {background: rgba(214, 50, 58, 0.67)}
+    100% {background: rgba(63, 63, 63, 0.67)}
+}
+
+.nav-icon {
+    transition: transform .8s, box-shadow .5s, border-top .5s, border-left .5s;
+}
+
+.nav-icon:hover {
+    box-shadow: 15px 15px 15px 0px rgba(0,0,0,0.4);
+	transform: translate(-10px, -10px);
+}
+.nav-icon:active {
+    transition: transform .2s;
+    transform: translate(0px, 1px);
+}

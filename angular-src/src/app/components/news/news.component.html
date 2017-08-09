@@ -1,0 +1,30 @@
+<h3 class="title">News</h3>
+<div class="wrapper-1">
+  <div id="abc-news" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item" *ngFor="let n of news; let index = index" [class.active]="index == 0">
+        <figure (click)="onNewsClick(n)">
+          <img src="{{n.urlToImage}}">
+          <figcaption>{{n.title}}</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-2">
+    <app-cnnews></app-cnnews>
+    <div class="wrapper-3">
+      <a class="item-1" href="https://developer.mozilla.org/en-US/" target="_blank">
+        <img class="nav-icon" [src]='mdnLogo'>
+      </a>
+      <a class="item-2" href="https://github.com/junlinguo11" target="_blank">
+        <img class="nav-icon" [src]='githubLogo'>
+      </a>
+      <a class="item-3" href="https://bitbucket.org/" target="_blank">
+        <img class="nav-icon" [src]='bitbucketLogo'>
+      </a>
+      <a class="item-4" href="https://teamtreehouse.com/home" target="_blank">
+        <img class="nav-icon" [src]='treehouseLogo'>
+      </a>
+    </div>
+  </div>
+</div>

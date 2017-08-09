@@ -1,0 +1,91 @@
+<div class="container" *ngIf="skill && cert">
+  <div class="row">
+    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+      <img id="my_photo" class="img-responsive" src="assets/images/photo.jpg" alt="My photo">
+    </div>
+    <div class="col-lg-10 col-md-8 col-sm-6 col-8">
+      <h1 id="name">Junlin Guo</h1>
+      <div class="col-lg-8 col-md-8 col-sm-10 col-10">
+        <h3 id="description">Full stack JavaScript Developer</h3>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row align-items-start">
+    <div class="head col-lg-1 col-md-1 col-sm-3 col-5">
+			<h3>Skilles</h3>
+		</div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-10">
+      <div class="row justify-content-end">
+        <div class="content col-lg-10 col-md-8 col-sm-6 col-10">
+          <div class="content-inner">
+            <p><strong>Languages:</strong> {{skill.language.join(", ")}}</p>
+            <p>
+              <strong>Frameworks:</strong>
+              <span *ngFor = "let f of skill.framework; let isLast=last">
+                {{f.name}}{{isLast ? '' : ', '}}
+              </span>          
+            </p>
+            <p><strong>Databases:</strong> {{skill.database.join(", ")}}</p>
+            <p><strong>Library:</strong> {{skill.library}}</p>
+            <p><strong>Runtime Environment:</strong> {{skill.runtimeEnvironment}}</p>
+            <p><strong>Development Tools:</strong> {{skill.developmentTools.join(", ")}}</p>
+            <p><strong>Version Control:</strong> {{skill.versionControl.join(", ")}}</p>
+            <p><strong>software:</strong> {{skill.software.join(", ")}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row align-items-start">
+    <div class="head col-lg-1 col-md-1 col-sm-3 col-5">
+			<h3>Cerfiticates</h3>
+		</div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-10">
+      <div class="row justify-content-end">
+        <div class="content col-lg-10 col-md-8 col-sm-6 col-10">
+          <div class="content-inner">
+            <p *ngFor="let c of cert"><strong>{{c.abbr}}:</strong> {{c.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row align-items-start">
+    <div class="head col-lg-1 col-md-1 col-sm-3 col-5">
+			<h3>Education</h3>
+		</div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-10">
+      <div class="row justify-content-end">
+        <div class="content col-lg-10 col-md-8 col-sm-6 col-10" *ngFor="let i of edu">
+          <div class="content-inner">
+            <h4>{{i.school}}, {{i.country}}</h4>
+            <h5>{{i.startTime}}-{{i.endTime}}</h5>
+            <p> 
+              {{i.degree}}
+              {{i.description}} <br>
+              <strong>{{i.grades}}</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row align-items-start">
+    <div class="head col-lg-1 col-md-1 col-sm-3 col-5">
+			<h3>Languages</h3>
+		</div>
+    <div class="col-lg-10 col-md-10 col-sm-8 col-10">
+      <div class="row justify-content-end">
+        <div class="content col-lg-10 col-md-8 col-sm-6 col-10">
+          <div class="content-inner">
+            <p *ngFor="let l of language"><strong>{{l.name}}:</strong> {{l.isFirst? "First Language": l.exam[0].name + ' ' + l.exam[0].result.join(', ')}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

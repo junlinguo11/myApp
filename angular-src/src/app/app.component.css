@@ -1,0 +1,12 @@
+/*.container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: auto;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.container > * {
+    display: inline-block;
+    white-space: normal;
+}*/

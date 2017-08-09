@@ -1,0 +1,84 @@
+figure {
+  display: table;
+  position: relative;
+  cursor: pointer;
+}
+
+figure img {
+  display: block;
+  margin: 0;
+}
+
+figcaption {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font: 400 18px/26px Verdana, sans-serif;
+  padding: .2em 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+}
+
+.carousel {
+  transition: transform .8s, box-shadow .5s;
+}
+
+.carousel-inner {
+  max-height: 338px;
+  max-width: 338px;
+}
+
+.carousel:hover {
+  box-shadow: 15px 25px 15px 0px rgba(0,0,0,0.4);
+	transform: translate(-10px, -10px);
+}
+
+.wrapper-1{
+    display:grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap:.5em;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(338px, auto);
+    white-space: normal;
+}
+
+.wrapper-2{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap:1em;
+    grid-auto-columns: minmax(338px, auto);
+}
+
+#abc-news {
+    grid-row: 1 / 3;
+    max-height: 338px;
+    max-width: 338px;
+}
+
+.wrapper-3{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap:.5em;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(160px, auto);
+    align-self: stretch;
+}
+
+.item-2, .item-4 {
+    justify-self: end;
+}
+
+.item-1, .item-3 {
+    justify-self: start;
+}
+
+.nav-icon {
+    background-color: white;
+    max-height: 71px;
+    max-width: 71px;
+    transition: transform .8s, box-shadow .5s, border-top .5s, border-left .5s;
+}

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url("./assets/images/pattern.png");
+    /*overflow-y: hidden;*/
+}
+
+.title {
+    color: whitesmoke;
+}
+
+.nav-icon {
+    transition: transform .8s, box-shadow .5s, border-top .5s, border-left .5s;
+}
+
+.nav-icon:hover {
+    box-shadow: 15px 15px 15px 0px rgba(0,0,0,0.4);
+	transform: translate(-10px, -10px);
+}
+.nav-icon:active {
+    transition: transform .2s;
+    transform: translate(0px, 1px);
+}

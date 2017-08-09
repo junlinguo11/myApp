@@ -1,0 +1,65 @@
+
+<!--<div class="gallery">
+    <img *ngFor="let i of ins" class="ins" src="{{i.images.thumbnail.url}}" alt="{{i.caption != null ? i.caption.text : 'My photo'}}" (click)="onImgClick(i)">
+</div>-->
+
+<div id="myModal" class="modal" [style.display]="modalDisplay">
+  <span class="close" (click)="closeModal()">&times;</span>
+  <img class="modal-content" id="img01" [src]="modalSrc">
+  <div id="caption">{{captionText}}</div>
+</div>
+
+<h3 class="title">Memories</h3>
+<div class="wrapper">
+    <div id="landscape" class="carousel slide item-1" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <figure>
+                    <img src="assets/images/urumqi.jpg">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure>
+                    <img src="assets/images/xjtlu.jpg">
+                </figure>
+            </div>
+            <div class="carousel-item">
+                <figure>
+                    <img src="assets/images/liverpool.jpg">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div id="ins-1" class="carousel slide item-2" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item" *ngFor="let i of ins1; let index = index" [class.active]="index == 0">
+                <figure>
+                <img class="photo" src="{{i.images.thumbnail.url}}" alt="{{i.caption != null ? i.caption.text : 'My photo'}}" (click)="onImgClick(i)">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div id="youtube" class="item-3">
+        <a href="https://www.youtube.com/" target="_blank">
+        <img class="nav-icon" id="youtube" [src]='youtubeLogo'>
+        </a>
+    </div>
+    <div id="ins-2" class="carousel slide item-4" data-ride="carousel" data-interval="7000">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item" *ngFor="let i of ins2; let index = index" [class.active]="index == 0">
+                <figure>
+                    <img class="photo" src="{{i.images.thumbnail.url}}" alt="{{i.caption != null ? i.caption.text : 'My photo'}}" (click)="onImgClick(i)">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div id="ins-3" class="carousel slide item-5" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item" *ngFor="let i of ins3; let index = index" [class.active]="index == 0">
+                <figure>
+                    <img class="photo" src="{{i.images.thumbnail.url}}" alt="{{i.caption != null ? i.caption.text : 'My photo'}}" (click)="onImgClick(i)">
+                </figure>
+            </div>
+        </div>
+    </div>
+</div>

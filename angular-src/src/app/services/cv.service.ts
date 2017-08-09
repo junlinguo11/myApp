@@ -9,22 +9,22 @@ export class CvService {
     }
 
     getEdu() {
-        return this.http.get('https://localhost:5000/cv/edu')
+        return this.http.get('http://localhost:3000/cv/edu')
                 .map(res => res.json());
     }
 
     getSkill() {
-        return this.http.get('https://localhost:5000/cv/skill')
+        return this.http.get('http://localhost:3000/cv/skill')
                 .map(res => res.json());
     }
 
     getCert() {
-        return this.http.get('https://localhost:5000/cv/cert')
+        return this.http.get('http://localhost:3000/cv/cert')
                 .map(res => res.json());
     }
 
     getLanguage() {
-        return this.http.get('https://localhost:5000/cv/language')
+        return this.http.get('http://localhost:3000/cv/language')
                 .map(res => res.json());
     }
 }

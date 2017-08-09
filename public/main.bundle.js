@@ -914,7 +914,7 @@ var CnNewsService = (function () {
         console.log('Service Initialized...');
     }
     CnNewsService.prototype.getCnNews = function () {
-        return this.http.get('https://localhost:5000/cnnews')
+        return this.http.get('http://localhost:3000/cnnews')
             .map(function (res) { return res.json(); });
     };
     return CnNewsService;
@@ -956,19 +956,19 @@ var CvService = (function () {
         console.log('Service Initialized...');
     }
     CvService.prototype.getEdu = function () {
-        return this.http.get('https://localhost:5000/cv/edu')
+        return this.http.get('http://localhost:3000/cv/edu')
             .map(function (res) { return res.json(); });
     };
     CvService.prototype.getSkill = function () {
-        return this.http.get('https://localhost:5000/cv/skill')
+        return this.http.get('http://localhost:3000/cv/skill')
             .map(function (res) { return res.json(); });
     };
     CvService.prototype.getCert = function () {
-        return this.http.get('https://localhost:5000/cv/cert')
+        return this.http.get('http://localhost:3000/cv/cert')
             .map(function (res) { return res.json(); });
     };
     CvService.prototype.getLanguage = function () {
-        return this.http.get('https://localhost:5000/cv/language')
+        return this.http.get('http://localhost:3000/cv/language')
             .map(function (res) { return res.json(); });
     };
     return CvService;
@@ -1010,7 +1010,7 @@ var InsService = (function () {
         console.log('Service Initialized...');
     }
     InsService.prototype.getIns = function () {
-        return this.http.get('https://localhost:5000/ins')
+        return this.http.get('http://localhost:3000/ins')
             .map(function (res) { return res.json(); });
     };
     return InsService;
@@ -1052,7 +1052,7 @@ var NewsService = (function () {
         console.log('Service Initialized...');
     }
     NewsService.prototype.getNews = function () {
-        return this.http.get('https://localhost:5000/news')
+        return this.http.get('http://localhost:3000/news')
             .map(function (res) { return res.json(); });
     };
     return NewsService;
@@ -1094,7 +1094,7 @@ var WeatherService = (function () {
         console.log('Service Initialized...');
     }
     WeatherService.prototype.getWeather = function () {
-        return this.http.get('https://localhost:5000/weather')
+        return this.http.get('http://localhost:3000/weather')
             .map(function (res) { return res.json(); });
     };
     return WeatherService;

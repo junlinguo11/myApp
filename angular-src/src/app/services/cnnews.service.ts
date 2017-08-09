@@ -9,7 +9,7 @@ export class CnNewsService {
     }
 
     getCnNews() {
-        return this.http.get('https://localhost:5000/cnnews')
+        return this.http.get('http://localhost:3000/cnnews')
                 .map(res => res.json());
     }
 }

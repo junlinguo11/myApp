@@ -22,6 +22,6 @@ app.use('/cnnews', cnnews);
 app.use('/weather', weather);
 app.use('/cv', cv);
 
-app.listen(5000, () => {
-  console.log('The application is running on localhost:5000!');
+app.listen(3000, () => {
+  console.log('The application is running on localhost:3000!');
 });

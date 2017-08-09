@@ -9,7 +9,7 @@ export class InsService {
     }
 
     getIns() {
-        return this.http.get('http://localhost:3000/ins')
+        return this.http.get('https://localhost:5000/ins')
                 .map(res => res.json());
     }
 }

@@ -9,7 +9,7 @@ export class WeatherService {
     }
 
     getWeather() {
-        return this.http.get('http://localhost:3000/weather')
+        return this.http.get('https://localhost:5000/weather')
                 .map(res => res.json());
     }
 }

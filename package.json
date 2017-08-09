@@ -1,0 +1,21 @@
+{
+  "name": "mywebapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Junlin Guo",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.5",
+    "node-instagram": "^3.0.0",
+    "request": "^2.81.0",
+    "retry-request": "^3.0.0"
+  }
+}
